@@ -5,12 +5,14 @@
     <meta name="author" content="Ruben Wuyts">
     <meta charset="UTF-8">
     <title>Contact</title>
-    <!--Link stylesheet-->
-    <link rel="stylesheet" type="text/css" href="../CSS/portfolio.css">
+    
+    
     <!--Bootstrap link via CDN-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    
+    <!--Link stylesheet-->  
+    <link rel="stylesheet" type="text/css" href="../CSS/portfolio.css">
+
 </head>
 
 <body>
@@ -19,98 +21,119 @@
         <!--Navigatie bar-->
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid" id="fluidNavCon">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                  </button>
-              
-              <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navLijst">
-                    <li class="nav-item">
-                      <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="curriculumVitae.html">Curriculum Vitae</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="ervaring.html">Ervaringen</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="hobbys.html">Hobby's</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-              </div>
-              <span class="navbar-text">Portfolio Ruben Wuyts</span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navLijst">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="curriculumVitae.html">Curriculum Vitae</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ervaring.html">Ervaringen</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="hobbys.html">Hobby's</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="navbar-text">Portfolio Ruben Wuyts</span>
             </div>
         </nav>
         <!--start Contact-->
-        <div class="row">
-            <div class="col-6">
-                <h3>
-                    Contactformulier
-                </h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-12" id="headerContact">
+                    <h3>
+                        Contactformulier
+                    </h3>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <h6>
-                    Indien u mij zou willen contacteren kan dat via volgend formulier.
-                </h6>
+            <div class="row">
+                <div class="col-12">
+                    <h6>
+                        Indien u mij zou willen contacteren kan dat via volgend formulier.
+                    </h6>
+                </div>
             </div>
         </div>
         <!--start formulier-->
-        <form action="registreren.phb" method="get">
-            <div class="row mb-3">
-                <label for="voorNaam" class="col-sm-2 col-form-label">Voornaam</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="voorNaam" placeholder="Jan">
+        <div class="container">
+            <form method="post" action="https://tm-statweb.be/sendmail.php">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="textVoorNaam" class="form-label">Voornaam</label>
+                            <input class="form-control" type="text" placeholder="John" aria-label="voornaam"
+                                id="textVoorNaam" required pattern="[A-Za-z]+">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="textAchterNaam" class="form-label">Achternaam</label>
+                            <input class="form-control" type="text" placeholder="Johnson" aria-label="achternaam"
+                                id="textAchterNaam" required pattern="[A-Za-z]+">
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row mb-3">
-                <label for="achterNaam" class="col-sm-2 col-form-label">Achternaam</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="achterNaam" placeholder="Jansens">
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label for="bedrijf" class="col-sm-2 col-form-label">Bedrijf</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="bedrijf" placeholder="Programming bvba">
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="HR@company.be">
-                </div>
-            </div>
-            <div class="input-group">
-                <span class="input-group-text">Vragen of opmerkingen</span>
-                <textarea class="form-control" aria-label="With textarea"></textarea>
-            </div>
 
-            <button type="submit" class="btn btn-primary">In sturen</button>
-        </form>
-    
+                <!--php mail requirement-->
+                <input type="hidden" name="studentemail" value="r0266879@student.thomasmore.be">
+                <div class="mb-3">
+                    <label for="inputEmail" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="johnJohnson@email.be"
+                        required>
+                    <small id="emailHelp" class="form-text text-muted">E-mail addressen worden nooit gedeeld met
+                        derden.</small>
+                </div>
+                <div class="mb-3">
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                        <option selected>Intresse in een bepaalde skill?</option>
+                        <option value="1">HTML</option>
+                        <option value="2">CSS</option>
+                        <option value="3">BOOTSTRAP</option>
+                        <option value="4">C#</option>
+                        <option value="5">SQL</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="textareaVraag" class="form-label">Vragen?</label>
+                    <textarea class="form-control" id="textareaVraag" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <input type="submit" value="Versturen">
+                </div>
+
+            </form>
+        </div>
+
     </div>
 
     <!--footer-->
     <div class="fixed-bottom">
-    <footer>
-        <div class="row">
-            <div class="col-sm-3 col-md-6">
-                <p>&copy; Ruben Wuyts</p>
+        <footer>
+            <div class="row">
+                <div class="col-sm-3 col-md-6">
+                    <p>&copy; Ruben Wuyts</p>
+                </div>
+                <div class="col-sm-3 col-md-6" id="colIcon">
+                    <img src="../Foto's/icoonFacebook.png" alt="icoon facebook" class="img-fluid">
+                    <img src="../Foto's/icoonInstagram.png" alt="icoon instagram" class="img-fluid">
+                    <img src="../Foto's/icoonTwitter.png" alt="icoon twitter" class="img-fluid">
+                </div>
             </div>
-            <div class="col-sm-3 col-md-6" id="colIcon">
-                <img src="../Foto's/icoonFacebook.png" alt="icoon facebook" class="img-fluid">
-                <img src="../Foto's/icoonInstagram.png" alt="icoon instagram" class="img-fluid">
-                <img src="../Foto's/icoonTwitter.png" alt="icoon twitter" class="img-fluid">
-            </div>
-        </div>
-    </footer>
-</div>
+        </footer>
+    </div>
 
     <!--Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
